@@ -4,6 +4,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Categories from './pages/Categories/Categories';
 import Meals from './pages/Meals/Meals';
 import Detail from './pages/Detail/Detail';
+import Config from 'react-native-config';
 
 const Stack = createNativeStackNavigator();
 
