@@ -4,7 +4,7 @@ import { SafeAreaView, View, Text, Image } from "react-native";
 const Categories = () => {
     return(
         <SafeAreaView>
-            <Text>Categories</Text>
+            <Text>Categories!</Text>
         </SafeAreaView>
     )
 }
