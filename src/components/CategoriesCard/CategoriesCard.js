@@ -2,13 +2,17 @@ import React from "react";
 import { View, Text, Image, TouchableWithoutFeedBack } from "react-native";
 import styles from './CategoriesCard.style';
 
-const CategoriesCard = ({ category, onSelect }) => {
+
+const CategoriesCard = ({category}) => {
+    
     return (
-        <TouchableWithoutFeedBack onPress={onSelect}>
-            <View style={styles.container}>
-                <Image style={styles.image} />
-                <Text style={styles.title}>Category</Text>
+        
+            <View style={{flex:1}} >
+               
+                <Text >{category.strCategory}</Text>
             </View>
-        </TouchableWithoutFeedBack>
+        
     )
 } 
+
+export default CategoriesCard;
