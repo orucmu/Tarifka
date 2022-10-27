@@ -4,13 +4,17 @@ import useFetch from "../../hooks/useFetch/useFetch";
 import Loading from "../../components/Loading/Loading";
 import Error from "../../components/Error/Error";
 import { API_MEALS } from "../../APIs";
-import MealsCard from '../../components/MealsCard/MealsCard'
+import MealsCard from "../../components/MealsCard/MealsCard";
 
 const Meals = ({navigation, route}) => {
     const {strCategory} = route.params;
     const {error, loading, data} = useFetch(API_MEALS+strCategory)
 
-    const renderMeals =({item}) => <Text>{item.strMeal}</Text>
+    const handleMealSelect = ({strMeal}) => {
+        navigation.navigate('DetailPage', {strMeal})
+    }
+
+    const renderMeals =({item}) => <MealsCard meal={item} onSelect={() => handleMealSelect(item.strMeal)} />
 
 
 
