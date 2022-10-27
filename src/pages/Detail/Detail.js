@@ -1,5 +1,5 @@
 import React from "react";
-import { View, FlatList, Text, ScrollView  } from "react-native";
+import { View, FlatList, Text, ScrollView } from "react-native";
 import Config from "react-native-config";
 import useFetch from "../../hooks/useFetch/useFetch";
 import Loading from "../../components/Loading/Loading";
@@ -8,15 +8,23 @@ import { API_RECIPE } from "../../APIs";
 import DetailCard from "../../components/DetailCard/DetailCard";
 
 
-const Detail = ({route}) => {
-    const {idMeal} = route.params;
-    const {loading, error, data} = useFetch(API_RECIPE+idMeal)
+const Detail = ({ route }) => {
+    const { idMeal } = route.params;
+    const { loading, error, data } = useFetch(API_RECIPE + idMeal)
 
-    const renderDetail = ({item}) => <DetailCard detail={item} />
+    if (loading) {
+        return <Loading />
+    }
+
+    if (error) {
+        return <Error />
+    }
+
+    const renderDetail = ({ item }) => <DetailCard detail={item} />
 
     return (
 
-       <FlatList data={data.meals} renderItem={renderDetail} />
+        <FlatList data={data.meals} renderItem={renderDetail} />
     )
 }
 
