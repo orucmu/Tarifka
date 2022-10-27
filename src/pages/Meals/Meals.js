@@ -10,11 +10,11 @@ const Meals = ({navigation, route}) => {
     const {strCategory} = route.params;
     const {error, loading, data} = useFetch(API_MEALS+strCategory)
 
-    const handleMealSelect = ({strMeal}) => {
-        navigation.navigate('DetailPage', {strMeal})
+    const handleMealSelect = (idMeal) => {
+        navigation.navigate('DetailPage', {idMeal})
     }
 
-    const renderMeals =({item}) => <MealsCard meal={item} onSelect={() => handleMealSelect(item.strMeal)} />
+    const renderMeals =({item}) => <MealsCard meal={item} onSelect={() => handleMealSelect(item.idMeal)} />
 
 
 
