@@ -1,5 +1,5 @@
 import React from "react";
-import { View, FlatList, Text, ScrollView } from "react-native";
+import { View, FlatList, StyleSheet } from "react-native";
 import Config from "react-native-config";
 import useFetch from "../../hooks/useFetch/useFetch";
 import Loading from "../../components/Loading/Loading";
@@ -24,8 +24,9 @@ const Detail = ({ route }) => {
 
     return (
 
-        <FlatList data={data.meals} renderItem={renderDetail} style={{backgroundColor:'#FF884B'}} />
+        <FlatList data={data.meals} renderItem={renderDetail} style={{backgroundColor:'white'}}   />
     )
 }
 
 export default Detail;
+
