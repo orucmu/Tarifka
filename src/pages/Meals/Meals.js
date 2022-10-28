@@ -25,7 +25,7 @@ const Meals = ({ navigation, route }) => {
     const renderMeals = ({ item }) => <MealsCard meal={item} onSelect={() => handleMealSelect(item.idMeal)} />
 
     return (
-        <FlatList data={data.meals} renderItem={renderMeals} />
+        <FlatList data={data.meals} renderItem={renderMeals} style={{backgroundColor:'#FF884B'}} />
     )
 }
 

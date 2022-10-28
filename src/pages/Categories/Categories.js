@@ -26,7 +26,7 @@ const Categories = ({ navigation }) => {
 
     return (
         <View>
-            <FlatList data={data.categories} renderItem={renderProduct} />
+            <FlatList data={data.categories} renderItem={renderProduct} style={{backgroundColor:'#FF884B'}} />
         </View>
     )
 }

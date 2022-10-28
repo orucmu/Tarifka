@@ -24,7 +24,7 @@ const Detail = ({ route }) => {
 
     return (
 
-        <FlatList data={data.meals} renderItem={renderDetail} />
+        <FlatList data={data.meals} renderItem={renderDetail} style={{backgroundColor:'#FF884B'}} />
     )
 }
 
