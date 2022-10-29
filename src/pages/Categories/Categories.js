@@ -1,6 +1,5 @@
-import React, { useState } from "react";
-import { FlatList, View } from "react-native";
-import Config from "react-native-config";
+import React from "react";
+import { FlatList } from "react-native";
 import useFetch from '../../hooks/useFetch/useFetch';
 import Loading from '../../components/Loading/Loading';
 import Error from '../../components/Error/Error';
@@ -9,7 +8,6 @@ import CategoriesCard from "../../components/CategoriesCard/CategoriesCard";
 
 const Categories = ({ navigation }) => {
     const { error, loading, data } = useFetch(`${API_CATEGORY}`);
-
     const handleCategorySelect = (strCategory) => {
         navigation.navigate('MealsPage', { strCategory })
     }
@@ -25,9 +23,7 @@ const Categories = ({ navigation }) => {
     const renderProduct = ({ item }) => <CategoriesCard category={item} onSelect={() => handleCategorySelect(item.strCategory)} />
 
     return (
-        <View>
-            <FlatList data={data.categories} renderItem={renderProduct} style={{backgroundColor:'#FF884B'}} />
-        </View>
+        <FlatList data={data.categories} renderItem={renderProduct} style={{ backgroundColor: '#FF884B' }} />
     )
 }
 

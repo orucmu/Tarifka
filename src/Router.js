@@ -12,7 +12,7 @@ function Router() {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name='CategoriesPage' component={Categories} options={{ title: 'Categories', headerTitleAlign: 'center', headerStyle: { backgroundColor: 'white' }, headerTitleStyle: { color: '#FF884B' } }} />
-        <Stack.Screen   name='MealsPage' component={Meals} options={{ headerBackTitle:'Back', title: 'Meals', headerTitleAlign: 'center', headerStyle: { backgroundColor: 'white' }, headerTitleStyle: { color: '#FF884B' }, headerTintColor: '#FF884B' }} />
+        <Stack.Screen name='MealsPage' component={Meals} options={{ title: 'Meals', headerTitleAlign: 'center', headerStyle: { backgroundColor: 'white' }, headerTitleStyle: { color: '#FF884B' }, headerTintColor: '#FF884B' }} />
         <Stack.Screen name='DetailPage' component={Detail} options={{ title: 'Detail', headerTitleAlign: 'center', headerStyle: { backgroundColor: 'white' }, headerTitleStyle: { color: '#FF884B' }, headerTintColor: '#FF884B' }} />
       </Stack.Navigator>
     </NavigationContainer>

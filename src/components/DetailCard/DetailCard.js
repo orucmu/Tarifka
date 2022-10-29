@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, Image, Button, Linking, TouchableWithoutFeedback } from "react-native";
+import { View, Text, Image, Linking, TouchableWithoutFeedback } from "react-native";
 import styles from './DetailCard.style'
 
 const DetailCard = ({ detail }) => {
@@ -12,9 +12,9 @@ const DetailCard = ({ detail }) => {
             </View>
             <Text style={styles.border}></Text>
             <Text style={styles.instruction}>{detail.strInstructions}</Text>
-            <TouchableWithoutFeedback  onPress={() => { Linking.openURL(detail.strYoutube) }} >
+            <TouchableWithoutFeedback onPress={() => { Linking.openURL(detail.strYoutube) }} >
                 <View style={styles.button}>
-                <Text style={styles.button_title}>Watch on Youtube</Text>
+                    <Text style={styles.button_title}>Watch on Youtube</Text>
                 </View>
             </TouchableWithoutFeedback>
         </View>

@@ -1,5 +1,5 @@
 import React from "react";
-import { FlatList, View, Text } from "react-native";
+import { FlatList } from "react-native";
 import useFetch from "../../hooks/useFetch/useFetch";
 import Loading from "../../components/Loading/Loading";
 import Error from "../../components/Error/Error";
@@ -21,11 +21,10 @@ const Meals = ({ navigation, route }) => {
     const handleMealSelect = (idMeal) => {
         navigation.navigate('DetailPage', { idMeal })
     }
-
     const renderMeals = ({ item }) => <MealsCard meal={item} onSelect={() => handleMealSelect(item.idMeal)} />
 
     return (
-        <FlatList data={data.meals} renderItem={renderMeals} style={{backgroundColor:'#FF884B'}} />
+        <FlatList data={data.meals} renderItem={renderMeals} style={{ backgroundColor: '#FF884B' }} />
     )
 }
 

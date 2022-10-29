@@ -5,8 +5,7 @@ import styles from './CategoriesCard.style';
 const CategoriesCard = ({ category, onSelect }) => {
     return (
         <SafeAreaView style={styles.container}>
-
-            <TouchableWithoutFeedback  onPress={onSelect} >
+            <TouchableWithoutFeedback onPress={onSelect} >
                 <View style={styles.card_container}>
                     <View>
                         <Image style={styles.image} source={{ uri: category.strCategoryThumb }} />
